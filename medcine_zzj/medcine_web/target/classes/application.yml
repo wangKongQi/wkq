@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: test
+    include:
+      - mybatis-plus
+      - redis
+
+  #打印sql语句，比较明显，效果好
+configuration:
+  #控制台打印出sql语句
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #开启结果集自动映射（"_"——>驼峰命名）
+  map-underscore-to-camel-case: true
+
+#是否激活 swagger true or false
+swagger:
+  enable:true
+
+#sql日志级别
+logging:
+  level:
+    com.medcine.dao: debug
+#文件上传
+servlet:
+  multipart:
+    max-file-size: 2MB
+    max-request-size: 10MB
+
+#文件路径配置
+img:
+  location: D://zzj//images/
+
+
+# --------------------异步线程配置 start--------------------
+async: # 配置核心线程数
+  executor:
+    thread:
+      core_pool_size: 5
+      max_pool_size: 10  # 配置最大线程数
+      queue_capacity: 99999   # 配置队列大小
+      name:
+        prefix: async-api-    # 配置线程池中的线程的名称前缀
+# --------------------异步线程配置 end--------------------
+
+

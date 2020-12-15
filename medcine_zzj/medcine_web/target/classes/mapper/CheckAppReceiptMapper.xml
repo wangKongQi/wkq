@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.CheckAppReceiptMapper">
+
+    <sql id="sql_cloumn_list">
+        select
+        b.ReceiptMainSN receiptMainSN,b.Name name,b.AppDeptCode appDeptCode,b.AppDept appDept,
+        b.OperateTime operateTime, b.CheckItems checkItems, b.IsPrint isPrint
+        from CheckAppReceipt a
+        left join CheckReceiptMain b on a.ReceiptAppSN = b.ReceiptAppSN
+    </sql>
+    <!--根据健康卡卡号查询报告单-->
+    <select id="getListByHealthCardNo" resultType="com.medcine.base.entity.receipt.CheckReceiptListBO">
+        <include refid="sql_cloumn_list"/>
+        where ReceiptAppSource = #{CZPHBId} or ReceiptAppSource = #{FZPHBId}
+    </select>
+
+    <!--根据条码号查询报告单-->
+    <select id="getListByReceiptAppCode" resultType="com.medcine.base.entity.receipt.CheckReceiptListBO">
+        <include refid="sql_cloumn_list"/>
+        where ReceiptAppCode = #{receiptAppCode}
+    </select>
+
+</mapper>

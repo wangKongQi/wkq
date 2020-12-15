@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.NumeralMapper">
+
+    <sql id="Base_Column_List">
+        num_id numId,org_no orgNo,org_name orgName,depart_no departNo,depart_name departName,doctor_no doctorNo,
+        name,now_num nowNum,num_date numDate,take_num_time takeNumTime
+    </sql>
+
+    <sql id="page_where">
+        is_delete = 0
+        <if test="orgNo != null and orgNo != ''">
+            and org_no = #{orgNo,jdbcType=VARCHAR}
+        </if>
+        <if test="departNo != null and departNo != ''">
+            and depart_no = #{departNo,jdbcType=VARCHAR}
+        </if>
+        <if test="doctorNo != null and doctorNo != ''">
+            and doctor_no = #{doctorNo,jdbcType=VARCHAR}
+        </if>
+        <if test="numDate != null">
+            <![CDATA[ and num_date >= #{numDate}]]>
+        </if>
+        <if test="numDateEnd != null">
+            <![CDATA[ and num_date <= #{numDateEnd}]]>
+        </if>
+    </sql>
+
+    <select id="getNum" resultType="java.lang.Integer">
+        select count(1)
+        from numeral
+        <where>
+            <include refid="page_where" />
+        </where>
+    </select>
+
+    <select id="pageQuery" resultType="com.medcine.base.entity.num.Numeral">
+        select * from (
+        SELECT row_number () OVER (ORDER BY num_date DESC) rownum,
+        <include refid="Base_Column_List" />
+        FROM numeral WITH(NOLOCK)
+        <where>
+            <include refid="page_where" />
+        </where>
+        ) tb
+        WHERE tb.rownum BETWEEN #{page} AND #{size}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT count(num_id)
+        from numeral WITH(NOLOCK)
+        <where>
+            <include refid="page_where" />
+        </where>
+    </select>
+
+</mapper>

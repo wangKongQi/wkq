@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.SelfMachineMapper">
+
+    <sql id="Base_Column_List">
+        id, machine_no machineNo, machine_name machineName, factory, model, num_receipts numReceipts, report,
+        org_no orgNo, org_name orgName, is_delete isDelete
+    </sql>
+
+    <sql id="page_where">
+        <where>
+            is_delete = 0
+            <if test="orgNo != null and orgNo != ''">
+                and org_no like CONCAT('%',#{orgNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="orgName != null and orgName != ''">
+                and org_name like CONCAT('%',#{orgName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="machineNo != null">
+                and machine_no like CONCAT('%',#{machineNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="machineName != null">
+                and machine_name like CONCAT('%',#{machineName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="factory != null">
+                and factory = #{factory,jdbcType=VARCHAR}
+            </if>
+            <if test="model != null">
+                and model = #{model,jdbcType=VARCHAR}
+            </if>
+            <if test="numReceipts != null">
+                and num_receipts = #{numReceipts,jdbcType=VARCHAR}
+            </if>
+            <if test="report != null">
+                and report = #{report,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </sql>
+
+    <select id="pageQuery" resultType="com.medcine.base.entity.zzj.SelfMachine">
+        select * from (
+        SELECT row_number () OVER (ORDER BY id DESC) rownum,
+        <include refid="Base_Column_List" />
+        FROM self_machine WITH(NOLOCK)
+        <include refid="page_where" />
+        ) tb
+        WHERE tb.rownum BETWEEN #{page} AND #{size}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(id)
+        from self_machine WITH(NOLOCK)
+        <include refid="page_where" />
+    </select>
+
+</mapper>

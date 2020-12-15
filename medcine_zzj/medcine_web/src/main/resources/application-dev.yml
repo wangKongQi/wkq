@@ -1,0 +1,54 @@
+server:
+  #  配置端口18080
+  port: 4288
+  servlet:
+    context-path: /zzj/
+
+#配置数据库连接
+spring:
+  datasource:
+    #dynamic开始多数据源配置
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      datasource:
+        master:  # 数据源的名字:master
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://112.30.148.24:8399;DatabaseName=GW_HS_ZZJ_DB;
+          username: sa
+          password: Sa123456
+          maxActive: 20
+          initialSize: 1
+          maxWait: 60000
+          minIdle: 1
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 1
+          testWhileIdle: true
+          testOnBorrow: true
+          testOnReturn: true
+          poolPreparedStatements: true
+          maxOpenPreparedStatements: 20
+        slave_1: # 数据源的名字:桐城妇幼
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://dt.zwyc.net:50011;DatabaseName=WeiKangaqfybj;
+          username: web
+          password: vaK@fQuw1k
+          maxActive: 20
+          initialSize: 1
+          maxWait: 60000
+          minIdle: 1
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 1
+          testWhileIdle: true
+          testOnBorrow: true
+          testOnReturn: true
+          poolPreparedStatements: true
+          maxOpenPreparedStatements: 20
+
+
+
+
+
+
+

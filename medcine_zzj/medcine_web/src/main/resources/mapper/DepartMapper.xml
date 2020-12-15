@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.DepartMapper">
+
+    <sql id="Base_Column_List">
+        id, depart_no departNo, depart_name departName, category_code categoryCode, category_name categoryName,
+        classify_code classifyCode, classify_name classifyName,person_name personName, org_no orgNo, org_name orgName,
+        depart_tel departTel, is_num isNum, depart_desc departDesc, is_enable isEnable
+    </sql>
+
+    <sql id="page_where">
+        <where>
+            is_delete = 0
+            <if test="departNo != null and departNo != ''">
+                and depart_no like CONCAT('%',#{departNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="departName != null and departName != ''">
+                and depart_name like CONCAT('%',#{departName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="categoryCode != null">
+                and category_code = #{categoryCode,jdbcType=BIGINT}
+            </if>
+            <if test="classifyCode != null and classifyCode != ''">
+                and classify_code = #{classifyCode,jdbcType=VARCHAR}
+            </if>
+            <if test="orgNo != null and orgNo != ''">
+                and org_no like CONCAT('%',#{orgNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="orgName != null and orgName != ''">
+                and org_name like CONCAT('%',#{orgName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="isEnable != null">
+                and is_enable = #{isEnable,jdbcType=TINYINT}
+            </if>
+        </where>
+    </sql>
+    <select id="pageByQuery" resultType="com.medcine.base.entity.depart.Depart">
+        select * from (
+        SELECT row_number () OVER (ORDER BY id DESC) rownum,
+        <include refid="Base_Column_List" />
+        FROM depart WITH(NOLOCK)
+        <include refid="page_where" />
+        ) tb
+        WHERE tb.rownum BETWEEN #{page} AND #{size}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(id)
+        from depart WITH(NOLOCK)
+        <include refid="page_where" />
+    </select>
+
+    <select id="getList" resultType="com.medcine.base.entity.depart.DepartAndroid">
+        select
+        category_code categoryCode, category_name categoryName, classify_code classifyCode, classify_name classifyName
+        from depart WITH(NOLOCK)
+        where is_delete = 0
+        and org_no = #{orgNo,jdbcType=VARCHAR}
+        and category_code = #{categoryCode,jdbcType=BIGINT}
+    </select>
+
+    <select id="getByClassify" resultType="com.medcine.base.entity.depart.DepartAndroidBO">
+        select
+        depart_no departNo, depart_name departName
+        from depart WITH(NOLOCK)
+        where is_delete = 0
+        and org_no = #{orgNo,jdbcType=VARCHAR}
+        and category_code = #{categoryCode,jdbcType=BIGINT}
+        and classify_code = #{classifyCode,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

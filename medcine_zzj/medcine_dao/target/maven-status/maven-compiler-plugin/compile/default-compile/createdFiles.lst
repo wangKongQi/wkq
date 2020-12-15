@@ -1,0 +1,11 @@
+com\medcine\dao\PregnancyBooksMapper.class
+com\medcine\dao\CheckReceiptMainMapper.class
+com\medcine\dao\BasyWjtCodeDicMapper.class
+com\medcine\dao\SelfMachineMapper.class
+com\medcine\dao\DepartMapper.class
+com\medcine\dao\OrgMapper.class
+com\medcine\dao\CheckAppReceiptMapper.class
+com\medcine\dao\PersonMapper.class
+com\medcine\dao\BmzdMapper.class
+com\medcine\dao\FileMapper.class
+com\medcine\dao\NumeralMapper.class

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.OrgMapper">
+
+    <sql id="Base_Column_List">
+        id, org_no orgNo, org_name orgName, img_array imgArray, org_address orgAddress, org_head_name orgHeadName,
+        tel tel, org_desc orgDesc,is_delete isDelete
+    </sql>
+
+    <sql id="page_where">
+        <where>
+            is_delete = 0
+            <if test="orgNo != null and orgNo != ''">
+                and org_no like CONCAT('%',#{orgNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="orgName != null and orgName != ''">
+                and org_name like CONCAT('%',#{orgName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="tel != null and tel != ''">
+                and tel like CONCAT('%',#{tel,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+    </sql>
+
+    <select id="pageQuery" resultType="com.medcine.base.entity.org.OrgPageBO">
+        select * from (
+            SELECT row_number () OVER (ORDER BY id DESC) rownum,
+            <include refid="Base_Column_List" />
+            FROM org WITH(NOLOCK)
+            <include refid="page_where" />
+        ) tb
+        WHERE tb.rownum BETWEEN #{page} AND #{size}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT count(id)
+        from org WITH(NOLOCK)
+        <include refid="page_where" />
+    </select>
+
+</mapper>

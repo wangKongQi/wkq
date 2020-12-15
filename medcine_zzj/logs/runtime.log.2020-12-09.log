@@ -1,0 +1,270 @@
+2020-12-09 16:27:01.578 [restartedMain] INFO  com.medcine.MedcineManageApplication - Starting MedcineManageApplication on DESKTOP-BAM4AJO with PID 6880 (E:\gv_project\medcine_zzj\medcine_web\target\classes started by wkq in E:\gv_project\medcine_zzj)
+2020-12-09 16:27:01.581 [restartedMain] INFO  com.medcine.MedcineManageApplication - The following profiles are active: mybatis-plus,test
+2020-12-09 16:27:03.218 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:27:03.222 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$7a95628b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:27:03.229 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:27:03.241 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1106f1ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:27:03.603 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 4188 (http)
+2020-12-09 16:27:03.616 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4188"]
+2020-12-09 16:27:03.624 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 16:27:03.624 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-12-09 16:27:03.732 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/zzj] - Initializing Spring embedded WebApplicationContext
+2020-12-09 16:27:03.732 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2064 ms
+2020-12-09 16:27:03.950 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2020-12-09 16:27:04.757 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - master - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2020-12-09 16:27:04.842 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2020-12-09 16:27:04.843 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Starting...
+2020-12-09 16:27:04.939 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - slave_1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2020-12-09 16:27:04.946 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Start completed.
+2020-12-09 16:27:04.947 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - load a datasource named [master] success
+2020-12-09 16:27:04.948 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - load a datasource named [slave_1] success
+2020-12-09 16:27:04.948 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2020-12-09 16:27:05.189 [restartedMain] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.medcine.base.entity.code.Bmzd.
+2020-12-09 16:27:05.957 [restartedMain] INFO  com.medcine.config.AsyncExecutorConfig - start asyncServiceExecutor
+2020-12-09 16:27:05.957 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService
+2020-12-09 16:27:05.959 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'asyncServiceExecutor'
+2020-12-09 16:27:05.977 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-12-09 16:27:06.402 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-09 16:27:06.429 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-09 16:27:06.447 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-09 16:27:06.485 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-09 16:27:06.691 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addOrgUsingPOST_1
+2020-12-09 16:27:06.694 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-12-09 16:27:06.699 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_1
+2020-12-09 16:27:06.703 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageByQueryUsingGET_1
+2020-12-09 16:27:06.732 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2020-12-09 16:27:06.735 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_2
+2020-12-09 16:27:06.742 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_2
+2020-12-09 16:27:06.747 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDoctorListUsingGET_1
+2020-12-09 16:27:06.759 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageByQueryUsingGET_2
+2020-12-09 16:27:06.761 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-12-09 16:27:06.767 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: uploadUsingPOST_1
+2020-12-09 16:27:06.788 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2020-12-09 16:27:06.791 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_3
+2020-12-09 16:27:06.794 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_3
+2020-12-09 16:27:06.799 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageByQueryUsingGET_3
+2020-12-09 16:27:06.801 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-12-09 16:27:06.822 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4188"]
+2020-12-09 16:27:06.847 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4188 (http) with context path '/zzj'
+2020-12-09 16:27:06.850 [restartedMain] INFO  com.medcine.MedcineManageApplication - Started MedcineManageApplication in 5.948 seconds (JVM running for 7.785)
+2020-12-09 16:27:15.112 [http-nio-4188-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/zzj] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-09 16:27:15.112 [http-nio-4188-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-09 16:27:15.120 [http-nio-4188-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-12-09 16:28:49.700 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:49.716 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:49.769 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 0
+2020-12-09 16:28:53.297 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.insert - ==>  Preparing: INSERT INTO org ( org_no, org_name, img_array, org_address, org_head_name, tel, org_desc ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-12-09 16:28:53.297 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.insert - ==> Parameters: ceshi20201209(String), 测试数据20201209(String), (String), 2121212(String), 测试人员1(String), 19291129111(String), 1212121(String)
+2020-12-09 16:28:53.341 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.insert - <==    Updates: 1
+2020-12-09 16:28:53.395 [http-nio-4188-exec-10] DEBUG com.medcine.dao.PersonMapper.insert - ==>  Preparing: INSERT INTO person ( person_no, name, birthday, id_card_no, password, introduce, org_no, org_name, depart_no, depart_name, tel, zg_state, permissions ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-12-09 16:28:53.397 [http-nio-4188-exec-10] DEBUG com.medcine.dao.PersonMapper.insert - ==> Parameters: ceshi20201209(String), 测试数据20201209(String), 2020-12-09 16:28:53.385(Timestamp), (String), ceshi20201209(String), 1212121(String), ceshi20201209(String), 测试数据20201209(String), (String), (String), 19291129111(String), 100201(Long), 1(Integer)
+2020-12-09 16:28:53.448 [http-nio-4188-exec-10] DEBUG com.medcine.dao.PersonMapper.insert - <==    Updates: 1
+2020-12-09 16:28:53.618 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:53.618 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:53.665 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:53.830 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:53.831 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:53.873 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:54.037 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:54.038 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:54.081 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:54.246 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:54.246 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:54.288 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:54.451 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:54.451 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:54.493 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:54.657 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:54.658 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:54.700 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:54.863 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:54.864 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:54.906 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:55.070 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:55.071 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:55.114 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:55.276 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:55.276 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:55.318 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:55.482 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:55.483 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:55.526 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:55.690 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:55.690 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:55.733 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:55.896 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:55.896 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:55.940 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:56.101 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:56.103 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:56.146 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:56.312 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:56.313 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:56.360 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:56.526 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:56.528 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:56.578 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:56.746 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:56.747 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:56.792 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:56.957 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:56.958 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:57.000 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:57.165 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:57.166 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:57.210 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:57.376 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:57.376 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:57.420 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:57.586 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:57.587 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:57.629 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:57.793 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:57.794 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:57.836 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:58.001 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:58.002 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:58.043 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:58.206 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:58.207 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:58.249 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:58.414 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:58.414 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:58.456 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:58.619 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:58.620 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:58.662 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:58.824 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:58.824 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:58.866 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:59.029 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:59.029 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:59.071 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:59.234 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:59.234 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:59.276 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:59.439 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:59.440 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:59.482 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:59.647 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:59.647 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:59.690 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:28:59.853 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:28:59.854 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:28:59.897 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:00.060 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:00.061 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:00.103 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:00.266 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:00.267 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:00.308 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:00.472 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:00.472 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:00.515 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:00.678 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:00.679 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:00.720 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:00.882 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:00.882 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:00.925 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:01.089 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:01.090 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:01.132 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:01.296 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:01.297 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:01.339 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:01.503 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:01.504 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:01.547 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:01.710 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:01.711 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:01.753 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:01.917 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:01.918 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:01.960 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:02.125 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:02.125 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:02.167 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:02.330 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:02.330 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:02.372 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:02.534 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:02.535 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:02.577 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:02.741 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:02.742 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:02.784 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:02.949 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:02.950 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:02.993 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:03.155 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:03.155 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:03.196 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:03.358 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:03.358 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:03.400 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:03.563 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:03.563 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:03.604 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:03.768 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==>  Preparing: select top 1 * from org where org_no = ? and is_delete = ? 
+2020-12-09 16:29:03.768 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - ==> Parameters: ceshi20201209(String), 0(Integer)
+2020-12-09 16:29:03.810 [http-nio-4188-exec-10] DEBUG com.medcine.dao.OrgMapper.selectByOrgNo - <==      Total: 1
+2020-12-09 16:29:55.785 [Thread-19] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'asyncServiceExecutor'
+2020-12-09 16:29:55.788 [Thread-19] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2020-12-09 16:29:55.788 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2020-12-09 16:29:55.790 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2020-12-09 16:29:55.790 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Shutdown initiated...
+2020-12-09 16:29:55.792 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Shutdown completed.
+2020-12-09 16:29:55.792 [Thread-19] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2020-12-09 16:29:56.744 [restartedMain] INFO  com.medcine.MedcineManageApplication - Starting MedcineManageApplication on DESKTOP-BAM4AJO with PID 6880 (E:\gv_project\medcine_zzj\medcine_web\target\classes started by wkq in E:\gv_project\medcine_zzj)
+2020-12-09 16:29:56.744 [restartedMain] INFO  com.medcine.MedcineManageApplication - The following profiles are active: mybatis-plus,test
+2020-12-09 16:29:57.613 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:29:57.613 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$7a95628b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:29:57.616 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:29:57.618 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1106f1ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-09 16:29:57.726 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 4188 (http)
+2020-12-09 16:29:57.727 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4188"]
+2020-12-09 16:29:57.727 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 16:29:57.727 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-12-09 16:29:57.748 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/zzj] - Initializing Spring embedded WebApplicationContext
+2020-12-09 16:29:57.749 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1001 ms
+2020-12-09 16:29:57.801 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2020-12-09 16:29:58.024 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - master - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2020-12-09 16:29:58.066 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2020-12-09 16:29:58.067 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Starting...
+2020-12-09 16:29:58.126 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - slave_1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2020-12-09 16:29:58.136 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Start completed.
+2020-12-09 16:29:58.136 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - load a datasource named [master] success
+2020-12-09 16:29:58.136 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - load a datasource named [slave_1] success
+2020-12-09 16:29:58.136 [restartedMain] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2020-12-09 16:29:58.180 [restartedMain] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.medcine.base.entity.code.Bmzd.
+2020-12-09 16:29:58.883 [restartedMain] INFO  com.medcine.config.AsyncExecutorConfig - start asyncServiceExecutor
+2020-12-09 16:29:58.883 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService
+2020-12-09 16:29:58.884 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'asyncServiceExecutor'
+2020-12-09 16:29:58.892 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-12-09 16:29:59.151 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-09 16:29:59.187 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-09 16:29:59.189 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-09 16:29:59.205 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-09 16:29:59.335 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2020-12-09 16:29:59.340 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-12-09 16:29:59.351 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_1
+2020-12-09 16:29:59.360 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDoctorListUsingGET_1
+2020-12-09 16:29:59.381 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageByQueryUsingGET_1
+2020-12-09 16:29:59.387 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-12-09 16:29:59.463 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2020-12-09 16:29:59.467 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_2
+2020-12-09 16:29:59.473 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_2
+2020-12-09 16:29:59.481 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageByQueryUsingGET_2
+2020-12-09 16:29:59.483 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-12-09 16:29:59.491 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4188"]
+2020-12-09 16:29:59.495 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4188 (http) with context path '/zzj'
+2020-12-09 16:29:59.496 [restartedMain] INFO  com.medcine.MedcineManageApplication - Started MedcineManageApplication in 2.852 seconds (JVM running for 180.431)
+2020-12-09 16:29:59.500 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-12-09 16:30:01.615 [Thread-29] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'asyncServiceExecutor'
+2020-12-09 16:30:01.621 [Thread-29] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2020-12-09 16:30:01.621 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2020-12-09 16:30:01.623 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2020-12-09 16:30:01.624 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Shutdown initiated...
+2020-12-09 16:30:01.627 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - slave_1 - Shutdown completed.
+2020-12-09 16:30:01.627 [Thread-29] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye

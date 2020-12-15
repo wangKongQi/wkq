@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/medcine_base/medcine_base.iml" filepath="$PROJECT_DIR$/medcine_base/medcine_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medcine_dao/medcine_dao.iml" filepath="$PROJECT_DIR$/medcine_dao/medcine_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medcine_service/medcine_service.iml" filepath="$PROJECT_DIR$/medcine_service/medcine_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medcine_web/medcine_web.iml" filepath="$PROJECT_DIR$/medcine_web/medcine_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medcine_zzj.iml" filepath="$PROJECT_DIR$/medcine_zzj.iml" />
+    </modules>
+  </component>
+</project>

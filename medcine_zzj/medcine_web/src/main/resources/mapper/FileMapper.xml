@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.FileMapper">
+    <sql id="base_cloumn">
+        file_id fileId,file_name fileName,file_type fileType,file_size fileSize,path,
+        is_delete isDelete,sort
+    </sql>
+
+    <insert id="insertPK" parameterType="com.medcine.base.entity.file.FileInfo" useGeneratedKeys="true" keyProperty="fileId">
+        insert into file_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="fileId != null">
+                file_id,
+            </if>
+            <if test="fileName != null">
+                file_name,
+            </if>
+            <if test="fileType != null">
+                file_type,
+            </if>
+            <if test="fileSize != null">
+                file_size,
+            </if>
+            <if test="path != null">
+                path,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="fileId != null">
+                #{fileId,jdbcType=BIGINT},
+            </if>
+            <if test="fileName != null">
+                #{fileName,jdbcType=VARCHAR},
+            </if>
+            <if test="fileType != null">
+                #{fileType,jdbcType=VARCHAR},
+            </if>
+            <if test="fileSize != null">
+                #{fileSize,jdbcType=BIGINT},
+            </if>
+            <if test="path != null">
+                #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=TINYINT},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <select id="getByName" resultType="com.medcine.base.entity.file.FileInfo">
+        select
+        <include refid="base_cloumn" />
+        from file_info
+        where file_name = #{fileName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getById" resultType="com.medcine.base.entity.file.FileInfo">
+        select
+        <include refid="base_cloumn" />
+        from file_info
+        where file_id = #{fileId,jdbcType=BIGINT}
+    </select>
+</mapper>

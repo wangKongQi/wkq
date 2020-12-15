@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.PersonMapper">
+
+    <sql id="Base_Column_List">
+        id, person_no personNo, name, sex, birthday, id_card_no idCardNo, password, org_no orgNo, org_name orgName,
+        depart_no departNo, depart_name departName, xz_level xzLevel, jx_level jxLevel, tel, zg_state zgState, introduce,
+        is_num isNum,permissions, img_array imgArray
+    </sql>
+
+    <sql id="page_where">
+        <where>
+            is_delete = 0
+            <if test="personNo != null and personNo != ''">
+                and person_no = #{personNo,jdbcType=VARCHAR}
+            </if>
+            <if test="name != null and name != ''">
+                and name like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="idCardNo != null and idCardNo != ''">
+                and id_card_no like CONCAT('%',#{idCardNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="departNo != null and departNo != ''">
+                and depart_no = #{departNo,jdbcType=VARCHAR}
+            </if>
+            <if test="orgNo != null and orgNo != ''">
+                and org_no = #{orgNo,jdbcType=VARCHAR}
+            </if>
+            <if test="xzLevel != null">
+                and xz_level = #{xzLevel,jdbcType=BIGINT}
+            </if>
+            <if test="jxLevel != null">
+                and jx_level = #{jxLevel,jdbcType=BIGINT}
+            </if>
+            <if test="tel != null and tel != ''">
+                and tel = #{tel,jdbcType=VARCHAR}
+            </if>
+            <if test="zgState != null">
+                and zg_state = #{zgState,jdbcType=BIGINT}
+            </if>
+            <if test="isNum != null">
+                and is_num = #{isNum,jdbcType=TINYINT}
+            </if>
+        </where>
+    </sql>
+
+    <select id="pageQuery" resultType="com.medcine.base.entity.person.PersonPageBO">
+        select * from (
+        SELECT row_number () OVER (ORDER BY id DESC) rownum,
+        <include refid="Base_Column_List"/>
+        FROM person WITH(NOLOCK)
+        <include refid="page_where" />
+        ) tb
+        WHERE tb.rownum BETWEEN #{page} AND #{size}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(id)
+        from person WITH(NOLOCK)
+        <include refid="page_where" />
+    </select>
+
+    <select id="getInfo" resultType="com.medcine.base.entity.person.Person">
+        select
+        <include refid="Base_Column_List" />
+        from person
+        where person_no = #{personNo,jdbcType=VARCHAR}
+        and password = #{password,jdbcType=VARCHAR}
+        and is_delete = 0
+    </select>
+</mapper>

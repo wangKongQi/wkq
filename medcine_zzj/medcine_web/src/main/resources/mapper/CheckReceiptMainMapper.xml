@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.CheckReceiptMainMapper">
+
+    <!--根据身份证号获取报告单-->
+    <select id="getListByCard" resultType="com.medcine.base.entity.receipt.CheckReceiptListBO">
+        select
+        ReceiptMainSN receiptMainSN,Name name,AppDeptCode appDeptCode,AppDept appDept,ExeTime2 extTime2,
+        CheckItems checkItems, IsPrint isPrint
+        from CheckReceiptMain
+        where IdCardNo = #{idCardNo}
+    </select>
+
+    <!--根据id获取详情-->
+    <select id="getInfo" resultType="com.medcine.base.entity.receipt.CheckReceiptBO">
+        select
+        a.Name name,a.Sex sex,a.Age age,a.IdCardNo idCardNo,a.CheckItems checkItems,a.SampleCode sampleCode,
+        a.AppDept appDept,a.Diagnosis diagnosis,a.AppDoctor appdoctor,a.ExeDoctor exeDoctor,a.AppTime appTime,
+        a.ExeTime2 exeTime2,b.SendToHospName sendToHospName
+        from CheckReceiptMain a
+        left join CheckAppReceipt b on a.ReceiptAppSN = b.ReceiptAppSN
+        where a.ReceiptMainSN = #{receiptMainSN}
+    </select>
+
+    <!--根据主表id获取详情列表-->
+    <select id="getDatailList" resultType="com.medcine.base.entity.receipt.CheckReceiptDetail">
+        select
+        ItemName itemName,ItemValue itemValue,ItemUnit itemUnit,ItemRanges itemRanges, ItemValueFlag itemValueFlag
+        from CheckReceiptDetials
+        where ReceiptMainSN = #{receiptMainSN}
+    </select>
+
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.medcine.dao.BasyWjtCodeDicMapper">
+
+  <sql id="Base_Column_List">
+    CodeID codeId, Code code, CodeName codeName, PYCode pyCode, Type type, ParentCode parentCode
+  </sql>
+
+  <select id="selectByList" resultType="com.medcine.base.entity.code.BasyWjtCodeDic">
+    select
+    <include refid="Base_Column_List" />
+    from BASY_WJT_CodeDic
+    where Type = #{type,jdbcType=NVARCHAR}
+    and ParentCode = #{parentCode,jdbcType=NVARCHAR}
+  </select>
+
+</mapper>
